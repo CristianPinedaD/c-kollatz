@@ -35,13 +35,18 @@ int kollatz(int num) {
 
 	while (num != 1) {
 		if (isEven(num) == 1) {
+
+			printf("%d\n", num);
             num /= 2;
 			steps++;
+			printf("%d\n", num);
 		}
         else if (isEven(num) == 0) {
+			printf("%d\n", num);
 			num *= 3;
 			num++;
 			steps++; 
+			printf("%d\n", num);
 		}
 	}
 
@@ -57,4 +62,4 @@ int main(void) {
 	printf("It took %d steps to apply the Kollatz conjecture to this number.\n", kollatz(num));
 
 	return 0;
-}
+} 
